@@ -1,0 +1,38 @@
+    
+
+
+public void runMachine() throws IOException{
+        
+        running=true;
+        
+        try{
+            do{
+                System.out.println("Welcome to BracuBank ATM");
+                System.out.println("Location - Mohakhali");
+                System.out.println("Go to:");
+                System.out.println("__________________");
+                System.out.println("|      1. User mode      |");
+                System.out.println("__________________");
+                System.out.println("__________________");
+                System.out.println("|     2. Admin mode    |");
+                System.out.println("__________________");
+                System.out.println("Enter your mode: ");
+                int mode=input.nextInt();
+                
+                if(mode==1){
+                    userMode();
+                }
+                
+                else if(mode==2){
+                    adminMode();
+                }
+                else{
+                    System.out.println("An error occurred!");
+                }
+                
+            }while(running=true);
+        }
+        catch(Exception e){
+            System.out.println("An error occurred!");
+        }
+    }

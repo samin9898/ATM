@@ -1,0 +1,27 @@
+    private void printReceipt(double withdraw){
+        
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+        LocalDateTime now = LocalDateTime.now();  
+        
+        
+        System.out.println("*************************************************************");
+        System.out.println("                                        BRACU ATM RECEIPT                                           ");
+        System.out.println("*************************************************************");
+        System.out.println("                                       "+dtf.format(now)+"                                            ");
+        System.out.println();
+        
+//        System.out.println("Date:         " + );
+//        System.out.println("Time:         " + );
+        
+        
+        System.out.println("                            Card Number:                  " +username);
+        System.out.println();
+        System.out.println("                            Previous Amount:             "+ preB);
+        System.out.println();
+        System.out.println("                            Withdrawal Amount:          "+withdraw );
+        System.out.println();
+        System.out.println("                            New Amount:                   "+(Double.valueOf(preB)-withdraw));
+        System.out.println();
+        
+        System.out.println("*************************************************************");
+    }
